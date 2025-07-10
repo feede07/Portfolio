@@ -3,60 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Tu Nombre</h1>
-        <p>Diseñador de videojuegos | Artista digital</p>
+        <div class="home">
+            <a href="#home">Portfolio</a>
+        </div>
+
         <nav>
             <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#sobre-mi">About</a></li>
+                <li><a href="#proyectos">Projects</a></li>
+                <li><a href="#contacto">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <section id="home">
+    <div class="home-contenido">
+        <div class="texto-home">
+        <h1>FEDERICO</h1>
+        <h1>DIAZ</h1>
+        </div>
+        <div class="foto-home">
+        <img src="QR.png" alt="Foto de perfil">
+        </div>
+    </div>
+    </section>
+
     <section id="sobre-mi">
-        <h2>Sobre Mí</h2>
-        <p>¡Hola! Soy un apasionado del diseño de videojuegos y la creación de experiencias interactivas. Me encanta explorar nuevos estilos gráficos y contar historias a través del arte digital.</p>
+        <h2>About me</h2>
+        <p> ... </p>
     </section>
 
     <section id="proyectos">
-        <h2>Proyectos</h2>
+        <h2>Projects</h2>
         <div class="proyecto">
-            <img src="imagen1.jpg" alt="Proyecto 1">
             <h3>Proyecto 1</h3>
             <p>Descripción breve del proyecto.</p>
         </div>
         <div class="proyecto">
-            <img src="imagen2.jpg" alt="Proyecto 2">
             <h3>Proyecto 2</h3>
             <p>Descripción breve del proyecto.</p>
         </div>
     </section>
 
     <section id="contacto">
-        <h2>Contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
+        <h2>Contact</h2>
     </section>
 
     <footer>
-        <p>© 2025 Tu Nombre | <a href="https://www.linkedin.com">LinkedIn</a> | <a href="https://github.com">GitHub</a></p>
+        <p>© 2025 FEDERICO DIAZ. All rights reserved</p>
     </footer>
 
 </body>

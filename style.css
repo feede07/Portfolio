@@ -1,37 +1,101 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top:0px;;
     background-color: #f4f4f4;
     color: #333;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    display: flex;  
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color:transparent;
     text-align: center;
-    padding: 20px;
+    z-index: 1000;
+    padding: 15px;
 }
 
-nav ul {
+.home {
+  flex-shrink: 0;
+  padding-left: 5px;
+}
+
+nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ul {
     list-style: none;
     padding: 0;
 }
 
-nav ul li {
+li {
     display: inline;
     margin: 0 15px;
 }
 
-nav a {
-    color: white;
+a {
+    color: rgb(152, 152, 152);
     text-decoration: none;
     font-weight: bold;
 }
 
-section {
-    padding: 40px;
-    text-align: center;
+#home {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+.home-contenido {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.texto-home h1 {
+  font-size: clamp(84px, 8vw, 110px);
+  text-align: left;
+  margin: 0;
+}
+
+.foto-home img {
+  width: clamp(250px, 25vw, 350px);
+  height: auto;
+  padding: 50px;
+  padding-right: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+
+#sobre-mi {
+    background-color: rgb(128, 128, 128);
+    padding: 100px 20px;
+    min-height: 80vh;
+}
+
+#proyectos {
+    background-color: rgb(176, 176, 176);
+    padding: 100px 20px;
+    min-height: 70vh;
+}
+
+#contacto {
+    background-color: rgb(255, 255, 255);
+    padding: 100px 20px;
+    min-height: 60vh;
 }
 
 .proyecto {
@@ -43,35 +107,10 @@ section {
     max-width: 600px;
 }
 
-.proyecto img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-form {
-    max-width: 400px;
-    margin: auto;
-    text-align: left;
-}
-
-form label, form input, form textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     margin-top: 20px;
 }
