@@ -14,7 +14,13 @@ header {
     background-color:transparent;
     text-align: center;
     z-index: 1000;
-    padding: 15px;
+    padding: 10px 10px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    gap: 10px; /* menos espacio entre elementos */
+  }
 }
 
 .home {
@@ -35,14 +41,15 @@ ul {
 
 li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 7px;
 }
 
 a {
-    color: rgb(152, 152, 152);
-    text-decoration: none;
-    font-weight: bold;
+  font-size: clamp(15px, 2vw, 20px);
+  color: rgb(152, 152, 152);
+  text-decoration: none;
 }
+
 
 #home {
     background-color: rgb(255, 255, 255);
@@ -55,7 +62,6 @@ a {
 
 .home-contenido {
   display: flex;
-  align-items: center;
   justify-content:space-between;
   gap: 40px;
   flex-wrap: wrap;
@@ -64,7 +70,7 @@ a {
 }
 
 .texto-home h1 {
-  font-size: clamp(84px, 8vw, 110px);
+  font-size: clamp(80px, 8vw, 110px);
   text-align: left;
   margin: 0;
 }
@@ -79,23 +85,174 @@ a {
   max-width: 100%;
 }
 
+@media (max-width: 768px) {
+  .home-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-#sobre-mi {
-    background-color: rgb(128, 128, 128);
-    padding: 100px 20px;
-    min-height: 80vh;
+  .texto-home h1 {
+    text-align: center;
+  }
 }
 
-#proyectos {
-    background-color: rgb(176, 176, 176);
+
+#sobre-mi {
+    background-image: url("fondoAboutMe.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 100px 20px;
-    min-height: 70vh;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-mi-contenido {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+#sobre-mi h2 {
+  font-size: clamp(20px, 5vw, 30px);
+  color: whitesmoke;
+  margin: 0;
+  flex: 1; /* ocupa 1 parte del espacio */
+  text-align: left;
+}
+
+#sobre-mi p {
+  font-size: clamp(16px, 2vw, 24px);
+  color: whitesmoke;
+  margin: 0;
+  flex: 2; /* ocupa más espacio que el título */
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .sobre-mi-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #sobre-mi h2,
+  #sobre-mi p {
+    text-align: center;
+  }
+}
+
+
+#proyectos {
+    background-color: rgb(26, 26, 26);
+    padding: 100px 20px;
+    min-height: 130vh;
+
+}
+
+#proyectos h2 {
+  font-size: clamp(24px, 5vw, 30px);
+  padding: 20px;
+  color: whitesmoke;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.intro-proyectos {
+  font-size: clamp(16px, 2vw, 20px);
+  color: whitesmoke;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+.tematica-proyecto {
+  margin: 20px auto;
+  display: flex;
+  align-items:center;
+  gap: 40px;
+  color: whitesmoke;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.numero {
+  font-size: 68px;
+  font-weight: bold;
+  color: #999;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.contenido-tematica h3 {
+  font-size: 24px;
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.tematica-proyecto h3 a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: color 0.3s ease;
+}
+
+.tematica-proyecto h3 a:hover {
+  color: #404040; /* color al pasar el ratón */
+}
+
+.contenido-tematica p {
+  margin: 0;
+  font-size: 18px;
+}
+
+#proyectos hr {
+  border: none;
+  border-top: 1px solid #b1b1b1;
+  margin: 70px auto;
+  max-width: 1000px;
 }
 
 #contacto {
     background-color: rgb(255, 255, 255);
-    padding: 100px 20px;
-    min-height: 60vh;
+    padding: 100px 40px;
+    min-height: 30vh;
+    text-align: center;
+}
+
+#contacto h2 {
+  font-size: clamp(24px, 5vw, 48px);
+  margin-bottom: 40px;
+}
+
+.contacto-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.icono img:hover {
+  transform: scale(1.2);
+}
+
+.correo {
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.icono img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
 }
 
 .proyecto {
@@ -108,8 +265,9 @@ a {
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: transparent;
+    font-size: 12px;
+    color: rgb(58, 58, 58);
     text-align: center;
     padding: 5px;
     margin-top: 20px;
