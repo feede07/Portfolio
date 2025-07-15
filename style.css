@@ -6,6 +6,12 @@ body {
     color: #333;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
 section {
   padding: 80px 20px;
   max-width: 1800px;
@@ -43,6 +49,8 @@ nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 100%; /* <-- muy importante */
+  box-sizing: border-box;
 }
 
 ul {
@@ -296,9 +304,6 @@ footer {
 }
 
 @media (max-width: 700px) {
-  body {
-    padding: 10px;
-  }
 
   section {
     padding: 40px 10px;
