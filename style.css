@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'bebas';
-  src: url('fonts/BebasNeue-Regular.ttf') format('type');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 
 body {
     font-family: Arial, sans-serif;
@@ -142,6 +134,7 @@ a {
 
 #sobre-mi {
     background-image: url("fondoAboutMe.png");
+    position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,10 +144,25 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#sobre-mi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* capa negra semitransparente */
+  z-index: 0; /* se queda detrás del contenido */
 }
 
 .sobre-mi-contenido {
   display: flex;
+  position: relative;
+  z-index: 1;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
